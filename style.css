@@ -1,0 +1,112 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html{
+    color :#555;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 240%;
+    text-rendering: optimizeLegibility;
+    text-transform: uppercase;
+}
+.header{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),    
+    url('pictures\hero.jpg');
+
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
+
+}
+.row{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+.hero-text-box{
+    width: 1140px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.topnav{
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  z-index: 3; 
+}
+
+.topnav a{
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 12px;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  transition: color 0.18s ease;
+}
+
+.topnav a span{
+  position: relative;
+  display: inline-block; 
+  padding-bottom: 2px;
+}
+
+.topnav a span::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background: orange;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.22s ease-out;
+}
+
+
+
+.topnav a:hover span::after{
+  transform: scaleX(1);
+}
+
+@media (max-width: 600px){
+  .topnav{
+    top: 12px;
+    gap: 1rem;
+    padding: 0 12px;
+  }
+  .topnav a{
+    font-size: 1.2rem;
+  }
+}
+.btn{
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    color:white
+}
+.btn:hover, btn:active{
+    background-color: orange 
+    border 1px solid orange;
+    color: white;
+}
+.btn-full{
+    background-color: orange;
+    border: 1px solid orange;
+    color: white;
+}
+.btn-ghost{
+    border: 1px solid;
+    color: orange;
+    transition: color white 0.2s;
+}
